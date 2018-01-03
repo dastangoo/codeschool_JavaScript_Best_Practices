@@ -1,45 +1,27 @@
-var isArthur = true;
-var isKing = false;
-var isArcher = true;
-var weapon;
-var helmet;
+var armory = { addSword: function (sword) {
+    // this.swords = this.swords ? this.swords : [];
+    // this.swords = this.swords || [];
+    this.swords =  [] || this.swords ;
+    this.swords.push(sword);
+  }
+};
 
-// if (isArthur) {
-//   weapon = "Excalibur";
-// } else {
-//   weapon = "Longsword";
-// }
-// 
-// console.log(weapon);
+armory.addSword("Broadsword");
+armory.addSword("Katana");
+armory.addSword("Claymore");
+armory.addSword("Scimitar");
+console.log(armory);
 
-// var weapon = isArthur ? "Excalibur" : "Longsword";
-
-// console.log(weapon);
+// var result1 = 42 || undefined;
+var result1 = undefined || 42;
+console.log(result1);
 
 
-// isArthur = true;
-// console.log("Current weapon: " + (isArthur && isKing ? "Excalibur" : "Longsword"));
+// var result2 = ["Sweet", "array"] || 0;
+var result2 = 0 || ["Sweet", "array"];
+console.log(result2);
 
-// isArthur && isKing ? alert("Hair Arthur, King of the Britons") : 
-//                      alert("Charge on, ye Knight, for the glory of the King!");
-                     
-                     
-// isArthur && isKing ? function () {
-//   alert("Hail Arthur, King of the Britons!");
-//   console.log("Current weapon: Excalibur");
-// }()
-// :
-// function () {
-//   alert("Charge on,, ye Knight, for the glory of the King!");
-//   console.log("Current weapon: Longsword");
-// }()
+// var result3 = { type: "ring", stone: "diamond" } || "";
+var result3 = "" || { type: "ring", stone: "diamond" };
+console.log(result3);
 
-// isArthur && isKing ? (weapon = "Excalibur", helmet = "Goosewhite") : (weapon = "Longsword" , helmet = "Iron Helm");
-// console.log("Current weapon: " + weapon + ", Current helmet: " + helmet);
-
-isArthur && isKing ? (weapon = "Excalibur", helmet = "Goosewhite")
-                   :
-                   isArcher ? (weapon = "Longbow", helmet = "Mail Helm")
-                   : (weapon = "Longsword", helmet = "Iron Helm");
-                   
-console.log("Current weapon: " + weapon + "\nCurrent helmet: " + helmet);
