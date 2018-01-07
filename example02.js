@@ -6,7 +6,7 @@ function SpeedTest(testImplement, testParams, repetitions) {
   
 }
 
-SpeedTest.prototype = {
+SpeedTest.prototype = {w
   startTest: function () {
      var beginTime, endTime, sumTimes = 0;
      for (var i = 0, x = this.repetitions; i < x; i++) {
