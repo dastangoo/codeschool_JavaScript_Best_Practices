@@ -1,4 +1,5 @@
-var ARMORY =(function(){
+var wartime = true;
+var ARMORY =(function(war){
   var weaponList = [],
   var armorList = [],
 
@@ -9,10 +10,12 @@ var ARMORY =(function(){
   
   return {
     makeWeaponRequest: function (weapon) {
-      removeWeapon();
+      if (war) {
+        // let civilians have weapon
+      }
     },
     makeArmorRequest: function () {},
   };
-})();
+})(wartime);
 
 ARMORY.makeWeaponRequest("Excalibur");
